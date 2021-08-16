@@ -72,7 +72,9 @@ function App() {
           <canvas ref={canvasRef} className="canvas" />
         </div>
       </section>
-      <footer className="app-footer"></footer>
+      <footer className="app-footer">
+        <h3>made by Gino Swanepoel</h3>
+      </footer>
     </div>
   );
 }
