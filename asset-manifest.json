@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/object-detection-app/static/css/main.e8f500e7.chunk.css",
-    "main.js": "/object-detection-app/static/js/main.22ec1323.chunk.js",
-    "main.js.map": "/object-detection-app/static/js/main.22ec1323.chunk.js.map",
+    "main.css": "/object-detection-app/static/css/main.75ac677c.chunk.css",
+    "main.js": "/object-detection-app/static/js/main.64fe867d.chunk.js",
+    "main.js.map": "/object-detection-app/static/js/main.64fe867d.chunk.js.map",
     "runtime-main.js": "/object-detection-app/static/js/runtime-main.ad88d1f8.js",
     "runtime-main.js.map": "/object-detection-app/static/js/runtime-main.ad88d1f8.js.map",
-    "static/js/2.17ee00cb.chunk.js": "/object-detection-app/static/js/2.17ee00cb.chunk.js",
-    "static/js/2.17ee00cb.chunk.js.map": "/object-detection-app/static/js/2.17ee00cb.chunk.js.map",
+    "static/js/2.c82e38f8.chunk.js": "/object-detection-app/static/js/2.c82e38f8.chunk.js",
+    "static/js/2.c82e38f8.chunk.js.map": "/object-detection-app/static/js/2.c82e38f8.chunk.js.map",
     "index.html": "/object-detection-app/index.html",
-    "static/css/main.e8f500e7.chunk.css.map": "/object-detection-app/static/css/main.e8f500e7.chunk.css.map",
-    "static/js/2.17ee00cb.chunk.js.LICENSE.txt": "/object-detection-app/static/js/2.17ee00cb.chunk.js.LICENSE.txt"
+    "static/css/main.75ac677c.chunk.css.map": "/object-detection-app/static/css/main.75ac677c.chunk.css.map",
+    "static/js/2.c82e38f8.chunk.js.LICENSE.txt": "/object-detection-app/static/js/2.c82e38f8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ad88d1f8.js",
-    "static/js/2.17ee00cb.chunk.js",
-    "static/css/main.e8f500e7.chunk.css",
-    "static/js/main.22ec1323.chunk.js"
+    "static/js/2.c82e38f8.chunk.js",
+    "static/css/main.75ac677c.chunk.css",
+    "static/js/main.64fe867d.chunk.js"
   ]
 }
