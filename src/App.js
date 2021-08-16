@@ -1,5 +1,5 @@
 // Import dependencies
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import { IoCameraReverse } from "react-icons/io5";
 
@@ -12,7 +12,12 @@ import "./App.css";
 import { drawRect } from "./utilities";
 
 function App() {
-  const [cameraFace, setCameraFace] = useState("user");
+  const FACING_MODE_USER = "user";
+  const FACING_MODE_ENVIRONMENT = "environment";
+  const videoConstraints = {
+    facingMode: FACING_MODE_USER,
+  };
+  const [facingMode, setFacingMode] = useState(FACING_MODE_USER);
 
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -65,28 +70,40 @@ function App() {
     runCoco();
   }, []);
 
-  function swapCamera(e) {
-    e.preventDefault();
-    if (cameraFace === "user") {
-      setCameraFace("environment");
-    } else if (cameraFace === "environment") {
-      setCameraFace("user");
-    }
-    console.log("camera swapped");
-    console.log(cameraFace);
-  }
+  // function swapCamera(e) {
+  //   e.preventDefault();
+  //   if (cameraFace === "user") {
+  //     setCameraFace("environment");
+  //   } else if (cameraFace === "environment") {
+  //     setCameraFace("user");
+  //   }
+  //   console.log("camera swapped");
+  //   console.log(cameraFace);
+  // }
+
+  const swapCamera = useCallback(() => {
+    setFacingMode((prevState) =>
+      prevState === FACING_MODE_USER
+        ? FACING_MODE_ENVIRONMENT
+        : FACING_MODE_USER
+    );
+  }, []);
 
   return (
     <div className="app">
       <header className="app-header">
         <h2>iSpy</h2>
+        <p>by Gino Swanepoel</p>
       </header>
       <section>
         <div className="container">
           <Webcam
             ref={webcamRef}
             muted={true}
-            videoConstraints={{ facingMode: { cameraFace } }}
+            videoConstraints={{
+              ...videoConstraints,
+              facingMode,
+            }}
             className="webcam"
           />
           <canvas ref={canvasRef} className="canvas" />
@@ -97,7 +114,7 @@ function App() {
           <IoCameraReverse className="camera-icon" onClick={swapCamera} />
         </div>
         <div className="app-footer-text">
-          <h3>made by Gino Swanepoel</h3>
+          <h3>{facingMode}</h3>
         </div>
       </footer>
     </div>
