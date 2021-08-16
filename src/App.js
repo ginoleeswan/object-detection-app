@@ -62,38 +62,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header"></header>
-      <Webcam
-        ref={webcamRef}
-        muted={true}
-        style={{
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          zindex: 9,
-          width: 640,
-          height: 480,
-        }}
-      />
+    <div className="app">
+      <header className="app-header">
+        <h2>iSpy</h2>
+      </header>
+      <Webcam ref={webcamRef} muted={true} className="webcam" />
 
-      <canvas
-        ref={canvasRef}
-        style={{
-          position: "absolute",
-          marginLeft: "auto",
-          marginRight: "auto",
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          zindex: 8,
-          width: 640,
-          height: 480,
-        }}
-      />
+      <canvas ref={canvasRef} className="canvas" />
     </div>
   );
 }
