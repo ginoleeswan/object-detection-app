@@ -1,6 +1,8 @@
 // Import dependencies
 import React, { useRef, useState, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
+import { IoCameraReverse } from "react-icons/io5";
+
 // 1. TODO - Import required model here
 // e.g. import * as tfmodel from "@tensorflow-models/tfmodel";
 import * as cocossd from "@tensorflow-models/coco-ssd";
@@ -10,6 +12,8 @@ import "./App.css";
 import { drawRect } from "./utilities";
 
 function App() {
+  const [cameraFace, setCameraFace] = useState("user");
+
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
 
@@ -61,6 +65,15 @@ function App() {
     runCoco();
   }, []);
 
+  function swapCamera(e) {
+    e.preventDefault();
+    if (cameraFace === "user") {
+      setCameraFace("environment");
+    } else if (cameraFace === "environment") {
+      setCameraFace("user");
+    }
+  }
+
   return (
     <div className="app">
       <header className="app-header">
@@ -68,12 +81,22 @@ function App() {
       </header>
       <section>
         <div className="container">
-          <Webcam ref={webcamRef} muted={true} className="webcam" />
+          <Webcam
+            ref={webcamRef}
+            muted={true}
+            facingMode={cameraFace}
+            className="webcam"
+          />
           <canvas ref={canvasRef} className="canvas" />
         </div>
       </section>
       <footer className="app-footer">
-        <h3>made by Gino Swanepoel</h3>
+        <div className="camera-icon-container">
+          <IoCameraReverse className="camera-icon" onClick={swapCamera} />
+        </div>
+        <div className="app-footer-text">
+          <h3>made by Gino Swanepoel</h3>
+        </div>
       </footer>
     </div>
   );
