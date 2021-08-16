@@ -12,6 +12,8 @@ export const drawRect = (detections, ctx) => {
     ctx.font = "50px Helvetica";
     ctx.fillStyle = color;
     ctx.lineWidth = 10;
+    ctx.textBaseline = "bottom";
+
     // draw rectangles and text
     ctx.beginPath();
     ctx.fillText(text, x, y);
