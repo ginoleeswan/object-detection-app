@@ -61,3 +61,15 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.app-footer {
+  position: absolute;
+  background-color: #181717;
+  height: 12vh;
+  min-height: 50px;
+  color: white;
+  /* position: fixed; */
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+}

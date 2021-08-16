@@ -72,6 +72,7 @@ function App() {
           <canvas ref={canvasRef} className="canvas" />
         </div>
       </section>
+      <footer className="app-footer"></footer>
     </div>
   );
 }
