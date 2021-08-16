@@ -72,6 +72,8 @@ function App() {
     } else if (cameraFace === "environment") {
       setCameraFace("user");
     }
+    console.log("camera swapped");
+    console.log(cameraFace);
   }
 
   return (
@@ -84,7 +86,7 @@ function App() {
           <Webcam
             ref={webcamRef}
             muted={true}
-            facingMode={cameraFace}
+            videoConstraints={{ facingMode: { cameraFace } }}
             className="webcam"
           />
           <canvas ref={canvasRef} className="canvas" />
