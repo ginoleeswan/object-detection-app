@@ -16,6 +16,7 @@ export const drawRect = (detections, ctx) => {
 
     // draw rectangles and text
     ctx.beginPath();
+    // ctx.scale(-1, 1);
     ctx.fillText(text, x, y);
     ctx.rect(x, y, width, height);
     ctx.stroke();

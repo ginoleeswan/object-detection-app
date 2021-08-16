@@ -66,9 +66,12 @@ function App() {
       <header className="app-header">
         <h2>iSpy</h2>
       </header>
-      <Webcam ref={webcamRef} muted={true} className="webcam" />
-
-      <canvas ref={canvasRef} className="canvas" />
+      <section>
+        <div className="container">
+          <Webcam ref={webcamRef} muted={true} className="webcam" />
+          <canvas ref={canvasRef} className="canvas" />
+        </div>
+      </section>
     </div>
   );
 }
