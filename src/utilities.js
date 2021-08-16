@@ -7,11 +7,11 @@ export const drawRect = (detections, ctx) => {
     const text = prediction["class"];
 
     // set styling
-    const color = "blue";
+    const color = "red";
     ctx.strokeStyle = color;
     ctx.font = "50px Helvetica";
     ctx.fillStyle = color;
-
+    ctx.lineWidth = 10;
     // draw rectangles and text
     ctx.beginPath();
     ctx.fillText(text, x, y);
