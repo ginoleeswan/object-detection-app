@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/object-detection-app/static/css/main.8a54872b.chunk.css",
-    "main.js": "/object-detection-app/static/js/main.af225a19.chunk.js",
-    "main.js.map": "/object-detection-app/static/js/main.af225a19.chunk.js.map",
+    "main.css": "/object-detection-app/static/css/main.070fbf53.chunk.css",
+    "main.js": "/object-detection-app/static/js/main.7ba0de2f.chunk.js",
+    "main.js.map": "/object-detection-app/static/js/main.7ba0de2f.chunk.js.map",
     "runtime-main.js": "/object-detection-app/static/js/runtime-main.ad88d1f8.js",
     "runtime-main.js.map": "/object-detection-app/static/js/runtime-main.ad88d1f8.js.map",
     "static/js/2.208247ab.chunk.js": "/object-detection-app/static/js/2.208247ab.chunk.js",
     "static/js/2.208247ab.chunk.js.map": "/object-detection-app/static/js/2.208247ab.chunk.js.map",
     "index.html": "/object-detection-app/index.html",
-    "static/css/main.8a54872b.chunk.css.map": "/object-detection-app/static/css/main.8a54872b.chunk.css.map",
+    "static/css/main.070fbf53.chunk.css.map": "/object-detection-app/static/css/main.070fbf53.chunk.css.map",
     "static/js/2.208247ab.chunk.js.LICENSE.txt": "/object-detection-app/static/js/2.208247ab.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ad88d1f8.js",
     "static/js/2.208247ab.chunk.js",
-    "static/css/main.8a54872b.chunk.css",
-    "static/js/main.af225a19.chunk.js"
+    "static/css/main.070fbf53.chunk.css",
+    "static/js/main.7ba0de2f.chunk.js"
   ]
 }
